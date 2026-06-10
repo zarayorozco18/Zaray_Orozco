@@ -2,38 +2,81 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
-        //
+
         Automovil miAuto = new Automovil();
-        Persona persona = new Persona();
-        Calculadora = calculadora = new Calculadora(); 
-        Rectangulo = new Rectangulo();
+        miAuto.ImprimirInformacionVehiculo("Mercedes");
+        miAuto.ImprimirInformacionVehiculoV2();
+        System.out.println();
 
-        //
-        System.out.println(">>>> Ingresa la base:");
+
+        Persona p = new Persona();
+        p.saludar("Carlos"); // Debe imprimir: Hola, me llamo: Carlos
+        p.presentarse(); // Debe imprimir: Me llamo: Ana, tengo: 25 anios
+        System.out.println();
+
+
+        Calculadora c = new Calculadora();
+        c.SumarmedioInterna(3);
+        c.SumarInterna();
+        c.Sumar(3, 4);
+        System.out.println();
+
+
+        Rectangulo r = new Rectangulo();
         double base = scanner.nextDouble();
-        System.out.println(">>>> Ingresa la altura: ");
+        double alto = scanner.nextDouble();
+        r.area(base, alto);
+        r.area();
+        /*
+         * r.perimetro();
+         * r.perimetro(base, alto);
+         * System.out.println();
+         */
+        System.out.println();
 
 
-        //llamamos los metodos de la clase automovil
-        miAuto.ImprimirInformacionvehiculo("Mercedes");
-        miAuto.ImprimirInformacionvehiculo2();
+        Banco b = new Banco();
+        b.depositar(1000);
+        b.mostrarSaldo();
+        System.out.println();
 
-        //llamamos los metodos de la clase persona
-        persona.Saludar("Zaray");
 
-        //
-        calculadora.Sumar(50, 40);
-        calculadora.SumaSinParams();
-        calculadora.SumaParamConVarGlobal (70);
+        Estudiante E = new Estudiante();
+        E.registrarNota(5);
+        E.verificarEstado();
+        System.out.println();
 
-        //
-        rectangulo.CalcularArea(base, altura);
-        rectangulo.CalcularAreaSinParams();
 
-        //
-        cuenta.Depositar(100.000);
+        Temperatura T = new Temperatura();
+        T.convertirAFahrenheit(18);
+        T.mostrarTemperatura();
+        System.out.println();
+
+
+        Descuento pD = new Descuento();
+        pD.aplicarDescuento(20000, 20);
+        pD.mostrarInfo();
+        System.out.println();
+
+
+        Mascota M = new Mascota();
+        M.emitirSonido("ladrido");
+        M.describir();
+        System.out.println();
+
+
+        Reloj R = new Reloj();
+        R.programarAlarma(6, 35);
+        R.mostrarHora();
+        System.out.println();
+
+        
+        Libro L = new Libro();
+        L.mostrarCatalogo("fantasia", 20000);
+        L.registrarProgreso(20);
+        L.mostrarFicha();
     }
-    
+
 }
-    

@@ -1,17 +1,17 @@
 public class Rectangulo {
-    public double base = 8.0;
-    public double altura = 4.0;
+    public double ancho = 6;
+    public double alto = 5;
 
-    public void CalcularArea(double base, double altura){
-        double resultado_area = base * altura;
-        System.out.println("El area del rectangulo es: " + resultado_area);
+    public void area (double base, double altura){
+        System.out.println("el area es " + (base * altura));
     }
- 
-    public void CalcularAreaSinParams(){
-        double resultado_area = this.base * this.altura;
-        System.out.println("El area del rectangulo es: " + resultado_area);
+    public void area (){
+        System.out.println("el area es " + (this.ancho * this.alto));
     }
-
-    
-
+    public void perimetro (){
+        System.out.println("el perimetro es " + ((this.ancho * this.alto)*2));
+    }
+    public void perimetro (double lados, double bases){
+        System.out.println("el area es " + ((bases + lados)*2));
+    }
 }
