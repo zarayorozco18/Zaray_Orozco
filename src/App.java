@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import arrays_unidimensionales.ArrayUnidimensional;
+
 public class App {
     public static void main(String[] args) {
 
@@ -55,9 +57,9 @@ public class App {
         System.out.println();
 
 
-        Descuento pD = new Descuento();
-        pD.aplicarDescuento(20000, 20);
-        pD.mostrarInfo();
+        Descuento D = new Descuento();
+        D.aplicarDescuento(20000, 20);
+        D.mostrarInfo();
         System.out.println();
 
 
@@ -77,6 +79,22 @@ public class App {
         L.mostrarCatalogo("fantasia", 20000);
         L.registrarProgreso(20);
         L.mostrarFicha();
+
+        EstructuraArray EstructuraArray = new EstructuraArray();
+        EstructuraArray.setValoresArray();
+        System.out.println();
+
+        ArrayUnidimensional arrayUnidimensional = new ArrayUnidimensional();
+
+        //llamamos a los metodos del array unidimensional
+        //
+        arrayUnidimensional.invertirArray(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10});
+        
+        //forma 2
+        //recomendada
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        arrayUnidimensional.invertirArray(array);
+
     }
 
 }
